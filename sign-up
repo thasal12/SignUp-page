@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+*{background-color:gray;}
+
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+h1{
+text-align:center;
+color:red;
+
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+button:hover {
+  opacity:1;
+}
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+.signup{
+   width:400px;
+   height:30px;
+   border:none;
+   margin:8% auto 0;
+   border-radius:17px;
+   padding-center:200px;
+   color:blue;
+}
+}
+}
+</style>
+
+<script >
+
+function sbutton(){
+var user=document.getElementById('email').value;
+var pass=document.getElementById("pass").value;
+var rep=document.getElementById("repeat").value;
+
+if(user==""){
+   alert("please enter your Email Id");
+}
+if(pass==""){
+   alert("please enter your password");
+  }
+if(rep==""){
+   alert("please enter your confirm");
+ 
+   }
+if(pass!=rep){
+    alert("you can enter the wrong confirm password");
+     }
+}
+function cancel(){
+alert("you don't insert data for the signup");
+}
+
+</script>
+<body>
+<h1><b>Sign Up</b></h1>
+<form id="Sign Up"  >
+  <div class="signup">
+ 
+    <p><b><u>Please fill in this form to create an account.</u></b></p>
+    <hr>
+
+    <label ><b>Email</b></label><br>
+    <input type="email" placeholder="Enter Email"id="email" name="email">
+     <br>
+	 
+    <label ><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password"id="pass" name="psw" >
+       <br>
+		
+    <label ><b>confirm Password</b></label><br>
+    <input type="password" placeholder="confirm Password"id="repeat" name="psw-repeat">
+      <br><br>
+	  
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn"onclick="cancel()">Cancel</button>
+      <button type="submit" class="signupbtn"onclick="sbutton()">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
